@@ -1,0 +1,4 @@
+实现逻辑删除的步骤：
+    1、在Config包中增加逻辑删除插件是mybatis-plus的
+    2、在实体类中增加@TableLogic 逻辑删除注解
+    3、在controller层中编写代码
