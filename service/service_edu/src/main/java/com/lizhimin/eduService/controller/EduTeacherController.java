@@ -46,7 +46,7 @@ public class EduTeacherController {
     @ApiOperation(value = "根据ID删除讲师")
     @DeleteMapping("{id}") //id 值要通过路径传递
     public R delTeacherById(@ApiParam(name = "id", value = "讲师ID", required = true)
-                                  @PathVariable String id){ //@PathVariable 得到路径中的id值。
+                                  @PathVariable Long id){ //@PathVariable 得到路径中的id值。
         boolean b = eduTeacherService.removeById(id);
         if(b){
             return R.ok();
@@ -108,7 +108,7 @@ public class EduTeacherController {
     @GetMapping("{id}")
     public R getById(
             @ApiParam(name = "id", value = "讲师ID", required = true)
-            @PathVariable String id){
+            @PathVariable Long id){
 
         EduTeacher teacher = eduTeacherService.getById(id);
         return R.ok().data("item", teacher);
@@ -117,7 +117,7 @@ public class EduTeacherController {
     @PutMapping("{id}")
     public R updateById(
             @ApiParam(name = "id", value = "讲师ID", required = true)
-            @PathVariable String id,
+            @PathVariable Long id,
 
             @ApiParam(name = "teacher", value = "讲师对象", required = true)
             @RequestBody EduTeacher teacher){

@@ -13,8 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.lizhimin"}) //设置包扫描
-public class EduTeaacherApplication {
+public class EduTeacherApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EduTeaacherApplication.class, args);
+        SpringApplication.run(EduTeacherApplication.class, args);
     }
 }
